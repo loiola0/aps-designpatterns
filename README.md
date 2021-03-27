@@ -8,4 +8,4 @@
 - [ ]  Abstract Factory
 - [ ]  Builder
 - [ ]  Factory Method
-- [ ]  Brigde
+- [ ]  Bridge
