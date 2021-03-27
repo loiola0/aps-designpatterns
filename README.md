@@ -3,6 +3,7 @@
 <strong>Contém alguns design patterns implementados em Java focados na resolução de questões da listas passadas pelos professor</strong>
 <hr>
 <br>
+
 - [ ]  Singleton
 - [ ]  Abstract Factory
 - [ ]  Builder
