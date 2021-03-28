@@ -6,11 +6,11 @@ import org.designpatterns.AbstractClasses.*;
 
 public class FabricaBradesco extends FabricaAbstrata{
 	
-	public MensagemLogon gerarMensagemLogin(){
+	public MensagemLogon mostrarTelaLogon(){
 		return new MensagemLogonBradesco();
 	};
 	
-	public MensagemLogout gerarMensagemLogout(){
+	public MensagemLogout mostrarTelaLogout(){
 		return new MensagemLogoutBradesco();
 	};
 }
