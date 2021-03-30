@@ -9,7 +9,7 @@ public class MensagemLogoutBradesco extends MensagemLogout{
 	
 	
 		public MensagemLogoutBradesco() {
-			super("/home/victor-gabriel/eclipse-workspace/list-aps/src/org/designpatterns/img/itau.png","O Banco Bradesco te aguarda até próxima!");
+			super("/home/victor-gabriel/eclipse-workspace/list-aps/src/org/designpatterns/img/bradesco.png","O Banco Bradesco te aguarda até próxima!");
 		}
 		
 		public void mostrarTelaGrafica() {

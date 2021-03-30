@@ -8,7 +8,7 @@ import org.designpatterns.AbstractClasses.MensagemLogon;
 public class MensagemLogonBradesco extends MensagemLogon {
 	
 	public MensagemLogonBradesco() {
-		super("/home/victor-gabriel/eclipse-workspace/list-aps/src/org/designpatterns/img/itau.png","Seja Bem Vindo ao Banco Bradesco");
+		super("/home/victor-gabriel/eclipse-workspace/list-aps/src/org/designpatterns/img/bradesco.png","Seja Bem Vindo ao Banco Bradesco");
 	}
 	
 	public void mostrarTelaGrafica() {
