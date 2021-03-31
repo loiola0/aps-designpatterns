@@ -7,8 +7,19 @@ public class Item {
 	private double valorUnitario;
 	private int quantidade;
 	
+	public Item(){}
+
+	public Item(int codigo, String nome, double valorUnitario, int quantidade) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.valorUnitario = valorUnitario;
+		this.quantidade = quantidade;
+	
+	}
+	
 	//methods
-	public double calculoValorTotal() {
+	public double calculoValorTotal(double valorUninatario,int quantidade) {
 		return valorUnitario * quantidade;
 	}
 	

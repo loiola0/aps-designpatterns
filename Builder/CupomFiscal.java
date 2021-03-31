@@ -1,5 +1,8 @@
 package org.designpatterns;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CupomFiscal {
 	//mandatory attributes
 	private String nomeLoja;
@@ -9,7 +12,7 @@ public class CupomFiscal {
 	private String cpfConsumidor;
 	private String cnpjConsumidor;
 	private double dinheiroRecebido;
-	private Item listaItem;
+	private ArrayList<Item> listaItem = new ArrayList<Item>();
 	
 	//constructor
 	private CupomFiscal(CupomFiscalBuilder builder) {
@@ -20,6 +23,55 @@ public class CupomFiscal {
 		this.dinheiroRecebido = builder.dinheiroRecebido;
 		this.listaItem = builder.listaItem;
 	}
+		
+	public String getNomeLoja() {
+		return nomeLoja;
+	}
+
+	public void setNomeLoja(String nomeLoja) {
+		this.nomeLoja = nomeLoja;
+	}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public String getCpfConsumidor() {
+		return cpfConsumidor;
+	}
+
+	public void setCpfConsumidor(String cpfConsumidor) {
+		this.cpfConsumidor = cpfConsumidor;
+	}
+
+	public String getCnpjConsumidor() {
+		return cnpjConsumidor;
+	}
+
+	public void setCnpjConsumidor(String cnpjConsumidor) {
+		this.cnpjConsumidor = cnpjConsumidor;
+	}
+
+	public double getDinheiroRecebido() {
+		return dinheiroRecebido;
+	}
+
+	public void setDinheiroRecebido(double dinheiroRecebido) {
+		this.dinheiroRecebido = dinheiroRecebido;
+	}
+
+	public ArrayList<Item> getListaItem() {
+		return listaItem;
+	}
+
+	public void setListaItem(Item listaItem) {
+		this.listaItem.add(listaItem);
+	}
+
 	
 	
 	public static class CupomFiscalBuilder{
@@ -32,7 +84,7 @@ public class CupomFiscal {
 		private String cpfConsumidor;
 		private String cnpjConsumidor;
 		private double dinheiroRecebido;
-		private Item listaItem;
+		private ArrayList<Item> listaItem;
 		
 		
 		public CupomFiscalBuilder(String nomeLoja, String cnpj) {
@@ -56,7 +108,7 @@ public class CupomFiscal {
 		}
 		
 		public CupomFiscalBuilder listaItem(Item listaItem) {
-			this.listaItem = listaItem;
+			this.listaItem.add(listaItem);
 			return this;
 		}
 		
