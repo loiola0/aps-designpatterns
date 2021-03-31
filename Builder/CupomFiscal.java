@@ -1,7 +1,6 @@
 package org.designpatterns;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class CupomFiscal {
 	//mandatory attributes
@@ -12,7 +11,9 @@ public class CupomFiscal {
 	private String cpfConsumidor;
 	private String cnpjConsumidor;
 	private double dinheiroRecebido;
-	private ArrayList<Item> listaItem = new ArrayList<Item>();
+	private Item[] listaItem = new Item[100];
+	Item lista = new Item();
+	private int posicaoCorrente = 0;
 	
 	//constructor
 	private CupomFiscal(CupomFiscalBuilder builder) {
@@ -64,12 +65,12 @@ public class CupomFiscal {
 		this.dinheiroRecebido = dinheiroRecebido;
 	}
 
-	public ArrayList<Item> getListaItem() {
-		return listaItem;
+	public Item[] getListaItem() {
+		return this.listaItem;
 	}
 
 	public void setListaItem(Item listaItem) {
-		this.listaItem.add(listaItem);
+		this.listaItem[posicaoCorrente++] = listaItem;
 	}
 
 	
@@ -84,7 +85,8 @@ public class CupomFiscal {
 		private String cpfConsumidor;
 		private String cnpjConsumidor;
 		private double dinheiroRecebido;
-		private ArrayList<Item> listaItem;
+		private Item [] listaItem = new Item[50];
+		private int posicaoCorrente = 0;
 		
 		
 		public CupomFiscalBuilder(String nomeLoja, String cnpj) {
@@ -108,7 +110,7 @@ public class CupomFiscal {
 		}
 		
 		public CupomFiscalBuilder listaItem(Item listaItem) {
-			this.listaItem.add(listaItem);
+			this.listaItem[posicaoCorrente++] = listaItem;
 			return this;
 		}
 		
