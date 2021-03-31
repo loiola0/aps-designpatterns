@@ -9,7 +9,7 @@ public class AbstracaoRefinada implements Abstracao {
 	}
 	
 	public void operacao() {
-		implementador.operacaoConcreta();
+		implementador.gerarArquivo();
 	}
 	
 }
